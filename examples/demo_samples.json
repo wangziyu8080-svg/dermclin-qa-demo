@@ -1,0 +1,86 @@
+[
+  {
+    "id": "demo-descriptors-001",
+    "task": "descriptors",
+    "image": "demo_images/demo_case_001_placeholder.jpg",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=descriptors] 请从固定皮损描述词表中选择最符合图像表现的术语。"
+      },
+      {
+        "from": "gpt",
+        "value": "红斑；斑块；鳞屑；边界清楚"
+      }
+    ]
+  },
+  {
+    "id": "demo-diagnosis-001",
+    "task": "diagnosis",
+    "image": "demo_images/demo_case_002_placeholder.jpg",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=diagnosis] 一名患者出现边界较清楚的红色鳞屑性斑块。最可能的诊断类别是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "银屑病"
+      }
+    ]
+  },
+  {
+    "id": "demo-differential-001",
+    "task": "differential",
+    "image": "demo_images/demo_case_003_placeholder.jpg",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=differential] 患者躯干部出现淡红色鳞屑性皮损。以下哪项最不应首先排除？\nA. 玫瑰糠疹\nB. 银屑病\nC. 浅部真菌感染\nD. 白癜风"
+      },
+      {
+        "from": "gpt",
+        "value": "D"
+      }
+    ],
+    "mcq_meta": {
+      "answer_key": "D",
+      "options": {
+        "A": "玫瑰糠疹",
+        "B": "银屑病",
+        "C": "浅部真菌感染",
+        "D": "白癜风"
+      }
+    }
+  },
+  {
+    "id": "demo-management-001",
+    "task": "management",
+    "image": "demo_images/demo_case_004_placeholder.jpg",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=management] 请给出用于研究评估的管理建议方向。"
+      },
+      {
+        "from": "gpt",
+        "value": "建议结合病史和体格检查确认诊断；轻中度炎症性皮损可考虑规范外用治疗、避免刺激因素，并根据病情安排随访。若皮损快速进展、疼痛明显或诊断不确定，应转诊皮肤科进一步评估。"
+      }
+    ]
+  },
+  {
+    "id": "demo-patient-concern-001",
+    "task": "patient_concern",
+    "image": "demo_images/demo_case_005_placeholder.jpg",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=patient_concern] 患者最可能关心：这种皮损会传染吗？请用通俗语言回答。"
+      },
+      {
+        "from": "gpt",
+        "value": "是否传染取决于最终诊断。许多炎症性皮肤病并不传染，但真菌、细菌或病毒相关皮肤病可能具有一定传染性。建议由医生结合病史和检查确认诊断，再决定是否需要隔离、治疗或家庭成员检查。"
+      }
+    ]
+  }
+]
