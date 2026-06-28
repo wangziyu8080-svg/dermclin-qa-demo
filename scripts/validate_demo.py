@@ -19,6 +19,7 @@ def main() -> int:
         return 2
 
     path = Path(sys.argv[1])
+    repo_root = path.resolve().parents[1]
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, list) or not data:
         raise ValueError("Demo file must contain a non-empty JSON list.")
@@ -36,6 +37,14 @@ def main() -> int:
             raise ValueError(f"sample {i} has invalid conversation roles")
         if "<image>" not in conv[0].get("value", ""):
             raise ValueError(f"sample {i} human prompt must contain <image>")
+        image_path = repo_root / item["image"]
+        if not image_path.is_file():
+            raise ValueError(f"sample {i} image file does not exist: {item['image']}")
+        source = item.get("source")
+        if source:
+            for key in ("dataset", "original_image_id", "license", "license_url"):
+                if key not in source:
+                    raise ValueError(f"sample {i} source missing key: {key}")
 
     print(f"OK: {len(data)} demo samples validated.")
     return 0

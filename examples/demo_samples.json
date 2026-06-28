@@ -1,85 +1,202 @@
 [
   {
-    "id": "demo-descriptors-001",
+    "id": "demo-descriptors-ca64d33c",
     "task": "descriptors",
-    "image": "demo_images/demo_case_001_placeholder.jpg",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/descriptors/train.json",
     "conversations": [
       {
         "from": "human",
-        "value": "<image>\n[task=descriptors] 请从固定皮损描述词表中选择最符合图像表现的术语。"
+        "value": "<image>\n请观察图片，从以下临床皮损描述符中**选出所有符合的选项**，只输出对应的名称，用顿号分隔。注意不许解释或输出其他内容。\n\n候选描述符：\n1. 丘疹\n2. 半透明\n3. 囊肿\n4. 圆顶状\n5. 外生性/蕈样增生\n6. 多形性皮肤萎缩\n7. 大疱\n8. 尖锐状\n9. 平顶\n10. 抓痕\n11. 斑块\n12. 斑片\n13. 斑疹\n14. 有蒂\n15. 条纹\n16. 棕色\n17. 棕色色素沉着\n18. 毛发斑片\n19. 毛细血管扩张\n20. 水疱\n21. 水肿\n22. 浸润硬结\n23. 渗出\n24. 溃疡\n25. 灰色\n26. 点状凹甲\n27. 珍珠样\n28. 甲变色\n29. 疣状\n30. 疣状/乳头状\n31. 瘢痕\n32. 白色\n33. 白色减色素\n34. 皮肤干燥\n35. 皲裂\n36. 硬化\n37. 粉刺\n38. 糜烂\n39. 紫癜/瘀点\n40. 紫色\n41. 红斑\n42. 结痂\n43. 结节\n44. 结节样\n45. 脆弱易出血\n46. 脐凹样\n47. 脓疱\n48. 脓肿\n49. 色素沉着\n50. 苔藓样变\n51. 萎缩\n52. 蓝色\n53. 角化过度性斑块\n54. 隧道\n55. 静脉扩张\n56. 风团\n57. 鲑红色\n58. 鳞屑\n59. 黄色\n60. 黑色"
       },
       {
         "from": "gpt",
-        "value": "红斑；斑块；鳞屑；边界清楚"
+        "value": "丘疹、鳞屑、红斑"
       }
     ]
   },
   {
-    "id": "demo-diagnosis-001",
+    "id": "demo-diagnosis-ca64d33c",
     "task": "diagnosis",
-    "image": "demo_images/demo_case_002_placeholder.jpg",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/diagnosis/train.json",
     "conversations": [
       {
         "from": "human",
-        "value": "<image>\n[task=diagnosis] 一名患者出现边界较清楚的红色鳞屑性斑块。最可能的诊断类别是什么？"
+        "value": "<image>\n[task=diagnosis] 一名患者出现红色丘疹伴有鳞屑。最可能的诊断是什么？"
       },
       {
         "from": "gpt",
-        "value": "银屑病"
+        "value": "玫瑰糠疹。"
       }
     ]
   },
   {
-    "id": "demo-differential-001",
+    "id": "demo-differential-ca64d33c",
     "task": "differential",
-    "image": "demo_images/demo_case_003_placeholder.jpg",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/differential/train.json",
     "conversations": [
       {
         "from": "human",
-        "value": "<image>\n[task=differential] 患者躯干部出现淡红色鳞屑性皮损。以下哪项最不应首先排除？\nA. 玫瑰糠疹\nB. 银屑病\nC. 浅部真菌感染\nD. 白癜风"
+        "value": "<image>\n[task=differential] 根据临床表现，以下哪项是本病例最可能的诊断？\nA. 花斑癣\nB. 玫瑰糠疹\nC. 银屑病\nD. 钱币状湿疹\n请给出最可能的诊断名称。"
       },
       {
         "from": "gpt",
-        "value": "D"
+        "value": "玫瑰糠疹。"
       }
     ],
     "mcq_meta": {
-      "answer_key": "D",
       "options": {
-        "A": "玫瑰糠疹",
-        "B": "银屑病",
-        "C": "浅部真菌感染",
-        "D": "白癜风"
-      }
+        "A": "花斑癣",
+        "B": "玫瑰糠疹",
+        "C": "银屑病",
+        "D": "钱币状湿疹"
+      },
+      "answer_text": "玫瑰糠疹。"
     }
   },
   {
-    "id": "demo-management-001",
+    "id": "demo-management-ca64d33c",
     "task": "management",
-    "image": "demo_images/demo_case_004_placeholder.jpg",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/management/train.json",
     "conversations": [
       {
         "from": "human",
-        "value": "<image>\n[task=management] 请给出用于研究评估的管理建议方向。"
+        "value": "<image>\n[task=management] 根据图片，结合患者的临床表现为玫瑰糠疹，最佳的治疗方案或下一步处理是什么？"
       },
       {
         "from": "gpt",
-        "value": "建议结合病史和体格检查确认诊断；轻中度炎症性皮损可考虑规范外用治疗、避免刺激因素，并根据病情安排随访。若皮损快速进展、疼痛明显或诊断不确定，应转诊皮肤科进一步评估。"
+        "value": "观察等待，通常可自愈。"
       }
     ]
   },
   {
-    "id": "demo-patient-concern-001",
+    "id": "demo-patient_concern-ca64d33c",
     "task": "patient_concern",
-    "image": "demo_images/demo_case_005_placeholder.jpg",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/patient_concern/train.json",
     "conversations": [
       {
         "from": "human",
-        "value": "<image>\n[task=patient_concern] 患者最可能关心：这种皮损会传染吗？请用通俗语言回答。"
+        "value": "<image>\n[task=patient_concern] 针对该患者，下列哪项建议最恰当？"
       },
       {
         "from": "gpt",
-        "value": "是否传染取决于最终诊断。许多炎症性皮肤病并不传染，但真菌、细菌或病毒相关皮肤病可能具有一定传染性。建议由医生结合病史和检查确认诊断，再决定是否需要隔离、治疗或家庭成员检查。"
+        "value": "该疾病通常无需特殊治疗，建议患者保持皮肤清洁干燥，避免过度搔抓。"
+      }
+    ]
+  },
+  {
+    "id": "demo-diagnosis-f7c6e5f7",
+    "task": "diagnosis",
+    "image": "demo_images/fitzpatrick17k_f7c6e5f7929dd5ca2b066698fd2e83ba.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "f7c6e5f7929dd5ca2b066698fd2e83ba.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=4268",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/diagnosis/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=diagnosis] 一名患者出现棕色丘疹（papule）。基于这些皮肤表现，最可能的诊断是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "黑色素瘤。"
+      }
+    ]
+  },
+  {
+    "id": "demo-management-f7c6e5f7",
+    "task": "management",
+    "image": "demo_images/fitzpatrick17k_f7c6e5f7929dd5ca2b066698fd2e83ba.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "f7c6e5f7929dd5ca2b066698fd2e83ba.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=4268",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/management/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=management] 查看以下图片。对于这种诊断为黑色素瘤（melanoma）的棕色丘疹，最佳治疗方案是什么？"
+      },
+      {
+        "from": "gpt",
+        "value": "进行广泛切除，并根据指南进行辅助治疗。"
+      }
+    ]
+  },
+  {
+    "id": "demo-patient_concern-f7c6e5f7",
+    "task": "patient_concern",
+    "image": "demo_images/fitzpatrick17k_f7c6e5f7929dd5ca2b066698fd2e83ba.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "f7c6e5f7929dd5ca2b066698fd2e83ba.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=4268",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/patient_concern/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=patient_concern] 针对该患者，下列哪项建议最恰当？"
+      },
+      {
+        "from": "gpt",
+        "value": "建议患者尽快转诊至皮肤肿瘤专科，并安排3个月内复诊，监测病变变化。"
       }
     ]
   }

@@ -6,7 +6,16 @@ Each sample follows a LLaVA-style two-turn conversation format:
 {
   "id": "demo-diagnosis-001",
   "task": "diagnosis",
-  "image": "demo_images/demo_case_001_placeholder.jpg",
+  "image": "demo_images/fitzpatrick17k_example.jpg",
+  "source": {
+    "dataset": "Fitzpatrick17k",
+    "source_collection": "Atlas Dermatologico",
+    "original_image_id": "source_image_id.jpg",
+    "original_url": "https://example.org/source-image",
+    "license": "CC BY-NC-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+  },
+  "prompt_source": "Dataframe/dermclin_qa/by_task_balanced_all/diagnosis/train.json",
   "conversations": [
     {
       "from": "human",
@@ -34,4 +43,6 @@ For multiple-choice differential diagnosis examples, an additional `mcq_meta` fi
 }
 ```
 
-The demo examples are anonymized and use placeholder image names. They are intended only to illustrate file structure, task tags, and answer formatting.
+The demo examples use redistributable Fitzpatrick17k images and intentionally expose only a few records. They are intended to illustrate file structure, task tags, answer formatting, and image attribution.
+
+The descriptors task follows the experimental prompt used for descriptor training/evaluation: the human turn contains `<image>`, the Chinese instruction, and the full 60-term descriptor vocabulary. In the current experimental JSON, this task does not include a `[task=descriptors]` prefix. The other tasks use explicit task tags: `[task=diagnosis]`, `[task=differential]`, `[task=management]`, and `[task=patient_concern]`.
