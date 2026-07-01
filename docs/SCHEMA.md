@@ -5,6 +5,7 @@ Each sample follows a LLaVA-style two-turn conversation format:
 ```json
 {
   "id": "demo-diagnosis-001",
+  "language": "zh",
   "task": "diagnosis",
   "image": "demo_images/fitzpatrick17k_example.jpg",
   "source": {
@@ -29,6 +30,13 @@ Each sample follows a LLaVA-style two-turn conversation format:
 }
 ```
 
+The optional `language` field indicates the supervision language:
+
+- `zh`: Chinese prompt and answer text.
+- `en`: English prompt and answer text.
+
+The full dataset is designed to support Chinese-only, English-only, and merged bilingual training. Language-specific files keep the same task taxonomy, image identifiers, source metadata, and LLaVA-style two-turn conversation structure, so users can train separate Chinese and English models or merge both languages for bilingual supervision.
+
 For multiple-choice differential diagnosis examples, an additional `mcq_meta` field may be present:
 
 ```json
@@ -43,6 +51,6 @@ For multiple-choice differential diagnosis examples, an additional `mcq_meta` fi
 }
 ```
 
-The demo examples use redistributable Fitzpatrick17k images and intentionally expose only a few records. They are intended to illustrate file structure, task tags, answer formatting, and image attribution.
+The demo examples use redistributable Fitzpatrick17k images and intentionally expose only a few records. They are intended to illustrate file structure, task tags, language-specific prompts, answer formatting, and image attribution.
 
-The descriptors task follows the experimental prompt used for descriptor training/evaluation: the human turn contains `<image>`, the Chinese instruction, and the full 60-term descriptor vocabulary. In the current experimental JSON, this task does not include a `[task=descriptors]` prefix. The other tasks use explicit task tags: `[task=diagnosis]`, `[task=differential]`, `[task=management]`, and `[task=patient_concern]`.
+The descriptors task follows the experimental prompt used for descriptor training/evaluation: the human turn contains `<image>`, the task instruction, and the full 60-term descriptor vocabulary in the target language. In the current experimental JSON, this task does not include a `[task=descriptors]` prefix. The other tasks use explicit task tags: `[task=diagnosis]`, `[task=differential]`, `[task=management]`, and `[task=patient_concern]`.

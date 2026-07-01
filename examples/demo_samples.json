@@ -21,7 +21,8 @@
         "from": "gpt",
         "value": "丘疹、鳞屑、红斑"
       }
-    ]
+    ],
+    "language": "zh"
   },
   {
     "id": "demo-diagnosis-ca64d33c",
@@ -45,7 +46,8 @@
         "from": "gpt",
         "value": "玫瑰糠疹。"
       }
-    ]
+    ],
+    "language": "zh"
   },
   {
     "id": "demo-differential-ca64d33c",
@@ -78,7 +80,8 @@
         "D": "钱币状湿疹"
       },
       "answer_text": "玫瑰糠疹。"
-    }
+    },
+    "language": "zh"
   },
   {
     "id": "demo-management-ca64d33c",
@@ -102,7 +105,8 @@
         "from": "gpt",
         "value": "观察等待，通常可自愈。"
       }
-    ]
+    ],
+    "language": "zh"
   },
   {
     "id": "demo-patient_concern-ca64d33c",
@@ -126,7 +130,8 @@
         "from": "gpt",
         "value": "该疾病通常无需特殊治疗，建议患者保持皮肤清洁干燥，避免过度搔抓。"
       }
-    ]
+    ],
+    "language": "zh"
   },
   {
     "id": "demo-diagnosis-f7c6e5f7",
@@ -150,7 +155,8 @@
         "from": "gpt",
         "value": "黑色素瘤。"
       }
-    ]
+    ],
+    "language": "zh"
   },
   {
     "id": "demo-management-f7c6e5f7",
@@ -174,7 +180,8 @@
         "from": "gpt",
         "value": "进行广泛切除，并根据指南进行辅助治疗。"
       }
-    ]
+    ],
+    "language": "zh"
   },
   {
     "id": "demo-patient_concern-f7c6e5f7",
@@ -198,6 +205,7 @@
         "from": "gpt",
         "value": "建议患者尽快转诊至皮肤肿瘤专科，并安排3个月内复诊，监测病变变化。"
       }
-    ]
+    ],
+    "language": "zh"
   }
 ]

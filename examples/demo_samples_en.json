@@ -1,0 +1,136 @@
+[
+  {
+    "id": "demo-en-descriptors-ca64d33c",
+    "language": "en",
+    "task": "descriptors",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa_en/by_task_balanced_all/descriptors/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\nInspect the image and select all matching clinical lesion descriptors from the fixed vocabulary. Output descriptor names only, separated by commas, with no explanation.\n\nCandidate descriptors:\n1. papule\n2. translucent\n3. cyst\n4. dome-shaped\n5. exophytic/fungating growth\n6. poikiloderma\n7. bulla\n8. pointed\n9. flat-topped\n10. excoriation\n11. plaque\n12. patch\n13. macule\n14. pedunculated\n15. linear/stripe\n16. brown\n17. brown pigmentation\n18. hair patch\n19. telangiectasia\n20. vesicle\n21. edema\n22. induration/infiltration\n23. exudate\n24. ulcer\n25. gray\n26. nail pitting\n27. pearly\n28. nail discoloration\n29. verrucous\n30. verrucous/papillomatous\n31. scar\n32. white\n33. hypopigmented white\n34. xerosis\n35. fissure\n36. sclerosis\n37. comedone\n38. erosion\n39. purpura/petechiae\n40. purple\n41. erythema\n42. crust\n43. nodule\n44. nodular\n45. friable/bleeding\n46. umbilicated\n47. pustule\n48. abscess\n49. hyperpigmentation\n50. lichenification\n51. atrophy\n52. blue\n53. hyperkeratotic plaque\n54. tunnel/burrow\n55. venous dilation\n56. wheal\n57. salmon-colored\n58. scale\n59. yellow\n60. black"
+      },
+      {
+        "from": "gpt",
+        "value": "papule, scale, erythema"
+      }
+    ]
+  },
+  {
+    "id": "demo-en-diagnosis-ca64d33c",
+    "language": "en",
+    "task": "diagnosis",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa_en/by_task_balanced_all/diagnosis/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=diagnosis] A patient presents with red papules with scale. What is the most likely diagnosis?"
+      },
+      {
+        "from": "gpt",
+        "value": "Pityriasis rosea."
+      }
+    ]
+  },
+  {
+    "id": "demo-en-differential-ca64d33c",
+    "language": "en",
+    "task": "differential",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa_en/by_task_balanced_all/differential/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=differential] Based on the clinical presentation, which of the following is the most likely diagnosis?\nA. Tinea versicolor\nB. Pityriasis rosea\nC. Psoriasis\nD. Nummular eczema\nPlease provide the most likely diagnosis name."
+      },
+      {
+        "from": "gpt",
+        "value": "Pityriasis rosea."
+      }
+    ],
+    "mcq_meta": {
+      "options": {
+        "A": "Tinea versicolor",
+        "B": "Pityriasis rosea",
+        "C": "Psoriasis",
+        "D": "Nummular eczema"
+      },
+      "answer_text": "Pityriasis rosea."
+    }
+  },
+  {
+    "id": "demo-en-management-ca64d33c",
+    "language": "en",
+    "task": "management",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa_en/by_task_balanced_all/management/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=management] Based on the image and the confirmed diagnosis of pityriasis rosea, what is the best management plan or next step?"
+      },
+      {
+        "from": "gpt",
+        "value": "Observe and wait, as it usually resolves spontaneously."
+      }
+    ]
+  },
+  {
+    "id": "demo-en-patient_concern-ca64d33c",
+    "language": "en",
+    "task": "patient_concern",
+    "image": "demo_images/fitzpatrick17k_ca64d33c7958910489d4c2385e0dec93.jpg",
+    "source": {
+      "dataset": "Fitzpatrick17k",
+      "source_collection": "Atlas Dermatologico",
+      "original_image_id": "ca64d33c7958910489d4c2385e0dec93.jpg",
+      "original_url": "http://atlasdermatologico.com.br/img?imageId=5597",
+      "license": "CC BY-NC-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "prompt_source": "Dataframe/dermclin_qa_en/by_task_balanced_all/patient_concern/train.json",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image>\n[task=patient_concern] For this patient, which health recommendation is most appropriate?"
+      },
+      {
+        "from": "gpt",
+        "value": "This condition usually does not require specific treatment; keep the skin clean and dry and avoid excessive scratching."
+      }
+    ]
+  }
+]

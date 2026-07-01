@@ -1,6 +1,6 @@
 # Demo Release Policy
 
-This repository is a limited public preview of the dermclin-qa dataset.
+This repository is a limited public preview of the bilingual dermclin-qa dataset.
 
 ## Rationale
 
@@ -8,6 +8,7 @@ The full dataset is associated with an unpublished manuscript. Before paper publ
 
 - the five-task organization,
 - the conversation-style JSON format,
+- the Chinese and English supervision format,
 - the limited use of two redistributable demo images,
 - the planned release policy.
 
@@ -28,4 +29,4 @@ This repository includes two Fitzpatrick17k example images from Atlas Dermatolog
 
 ## Full Release
 
-The full release is planned after paper publication or when the authors determine that public distribution is appropriate. The full release will follow a source-link/identifier-based design: users must obtain original images from the corresponding public datasets and comply with their licenses.
+The full release is planned after paper publication or when the authors determine that public distribution is appropriate. The full release is planned to include language-specific Chinese and English annotation files so that users can train Chinese-only, English-only, or merged bilingual models. The full release will follow a source-link/identifier-based design: users must obtain original images from the corresponding public datasets and comply with their licenses.
