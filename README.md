@@ -4,6 +4,8 @@ This repository is a **public demo preview** of DermClin-CVQA / dermclin-qa, a C
 
 The demo is released before paper publication to document the task format and data schema while protecting the full benchmark annotations. It is **not** the full dataset and should not be used to reproduce the paper results.
 
+完整数据集将在论文录用后放出。
+
 ## What Is Included
 
 - `examples/demo_samples.json`: a small set of demo examples following the experimental task prompt format.
